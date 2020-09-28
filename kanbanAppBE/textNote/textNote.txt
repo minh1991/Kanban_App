@@ -7,3 +7,10 @@ SELECT * FROM PROJECT
 	"description": "問題ない"
 }
 ------------------------------------------
+{
+	"id":"3",
+	"projectName":"私は +++",
+	"projectIdentifier":"DJ00125+",
+	"description": "問題ない+++"
+}
+------------------------------------------
