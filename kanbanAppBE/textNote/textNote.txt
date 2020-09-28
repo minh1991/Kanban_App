@@ -1,0 +1,9 @@
+------------------------------------------
+SELECT * FROM PROJECT
+------------------------------------------
+{
+	"projectName" : "TEST1",
+	"projectIdentifer": "IDTE",
+	"description":"new Project"
+}
+------------------------------------------
