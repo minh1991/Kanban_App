@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Project {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@NotBlank(message = "Project name is required")
 	private String projectName;
@@ -28,13 +28,13 @@ public class Project {
 	private String projectIdentifier;
 	@NotBlank(message = "Project description is required")
 	private String description;
-	@JsonFormat(pattern = "yyyy/mm/dd")
+	@JsonFormat(pattern = "yyyy/MM/dd HH:mm:ss")
 	private Date start_date;
-	@JsonFormat(pattern = "yyyy/mm/dd")
+	@JsonFormat(pattern = "yyyy/MM/dd HH:mm:ss")
 	private Date end_date;
-	@JsonFormat(pattern = "yyyy/mm/dd")
+	@JsonFormat(pattern = "yyyy/MM/dd HH:mm:ss")
 	private Date created_At;
-	@JsonFormat(pattern = "yyyy/mm/dd")
+	@JsonFormat(pattern = "yyyy/MM/dd HH:mm:ss")
 	private Date updated_At;
 
 	public Project() {

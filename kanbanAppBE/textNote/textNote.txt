@@ -2,8 +2,8 @@
 SELECT * FROM PROJECT
 ------------------------------------------
 {
-	"projectName" : "TEST1",
-	"projectIdentifer": "IDTE",
-	"description":"new Project"
+	"projectName":"私は",
+	"projectIdentifier":"DJ00128",
+	"description": "問題ない"
 }
 ------------------------------------------
