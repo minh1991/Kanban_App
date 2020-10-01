@@ -6,16 +6,20 @@ import Header from './Components/Layout/Header';
 import AddProject from './Components/Project/AddProject';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './Store';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Route path="/Dashboard" component={Dashboard} />
-        <Route path="/AddProject" component={AddProject} />
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Header />
+          <Route path="/Dashboard" component={Dashboard} />
+          <Route path="/AddProject" component={AddProject} />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
