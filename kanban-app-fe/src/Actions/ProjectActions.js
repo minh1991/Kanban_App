@@ -1,12 +1,15 @@
 import axios from 'axios';
-import { GET_ERRORS, GET_PROJECTS, GET_PROJECT } from './Types';
+import { GET_ERRORS, GET_PROJECTS, GET_PROJECT, DELETE_PROJECT } from './Types';
 
 export const createProject = (project, history) => async (dispatch) => {
   try {
     const res = await axios.post('http://localhost:8080/api/project', project);
     history.push('/dashboard');
+    dispatch({
+      type: GET_ERRORS,
+      payload: {},
+    });
   } catch (error) {
-    //console.log(error.response);
     dispatch({
       type: GET_ERRORS,
       payload: error.response.data,
@@ -40,6 +43,17 @@ export const getProject = (id, history) => async (dispatch) => {
     dispatch({
       type: GET_ERRORS,
       payload: error.response.data,
+    });
+    history.push('/dashboard');
+  }
+};
+
+export const deleteProject = (id) => async (dispatch) => {
+  if (window.confirm('Delete project?')) {
+    await axios.delete(`http://localhost:8080/api/project/${id}`);
+    dispatch({
+      type: DELETE_PROJECT,
+      payload: id,
     });
   }
 };
