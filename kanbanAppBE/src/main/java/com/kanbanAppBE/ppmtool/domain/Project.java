@@ -2,11 +2,14 @@ package com.kanbanAppBE.ppmtool.domain;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotBlank;
@@ -38,6 +41,9 @@ public class Project {
 	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date updated_At;
 
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "project")
+	private BackLog backLog;
+	
 	public Project() {
 	}
 
