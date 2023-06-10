@@ -5,6 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div>
+        <h1>dev_A TestGit</h1>
         <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
           <div className="container">
             <a className="navbar-brand" href="Dashboard.html">
