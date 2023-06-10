@@ -6,6 +6,7 @@ class Header extends Component {
     return (
       <div>
         <h1>dev_A TestGit</h1>
+        <h2>dev_B testGit</h2>
         <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
           <div className="container">
             <a className="navbar-brand" href="Dashboard.html">
